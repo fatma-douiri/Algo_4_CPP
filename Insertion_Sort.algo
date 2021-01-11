@@ -1,0 +1,15 @@
+PROCEDURE Insertion_sort (tab : ARRAY_OF INTEGER [50];)
+VAR
+    i , j , X :INTEGER;
+BEGIN
+    FOR i FROM 0 TO tab.lenght - 1 STEP 1  DO
+        X := tab [i];
+        j := i ;
+        WHILE (j>0 AND  tab[j-1] > X) DO
+            tab [j] :=tab [j-1];
+            j := j-1
+        END_WHILE
+
+        tab[j] := X ;
+    END_FOR
+END
